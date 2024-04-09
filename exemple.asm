@@ -1,17 +1,10 @@
-extern _putss
-section   .text
-global _begins
-_begins:
-	push ebp
-	mov ebp,esp
-	sub esp,64
+global begins
+extern putss
+begins:
 	mov eax,hello
 	push eax
-	call _putss
+	call putss
 	pop eax
-	mov esp,ebp
-	pop ebp
 	ret
-hello: db "hello world",13,10,0
-
+hello: db  "hello world",13,10,0
 
